@@ -29,7 +29,7 @@ const App = () => {
         iframeRef.style.marginTop = '10px';
         iframeRef.style.border = '10px dashed cyan';
         iframeRef.style.padding = '5px';
-        iframeRef.style.height = '50rem';
+        iframeRef.style.height = '80rem';
     };
 
     const handleApiReady = (apiObj, ref) => {
