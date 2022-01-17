@@ -26,10 +26,11 @@ const App = () => {
     };
 
     const handleJitsiIFrameRef = iframeRef => {
-        iframeRef.style.marginTop = '10px';
-        iframeRef.style.border = '10px dashed cyan';
-        iframeRef.style.padding = '5px';
-        iframeRef.style.height = '80rem';
+        iframeRef.style.overflow = 'hidden';
+        iframeRef.style.border = '0px dashed cyan';
+        iframeRef.style.margin = '0';
+        iframeRef.style.padding = '0';
+        iframeRef.style.height = '100%';
     };
 
     const handleApiReady = (apiObj, ref) => {
@@ -46,10 +47,6 @@ const App = () => {
 
     return (
         <>
-            <h1 style={{
-                fontFamily: 'sans-serif',
-                textAlign: 'center'
-            }}>sudoroom telepresence portal</h1>
             <JitsiMeeting
                 domain="meet.waag.org"
                 roomName="turtlesturtlesturtles"
