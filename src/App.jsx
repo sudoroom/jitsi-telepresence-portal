@@ -2,7 +2,7 @@
 import { JitsiMeeting } from '@jitsi/web-sdk';
 import React, { useRef, useState } from 'react';
 
-const monitorServerUrl = 'http://localhost:8100/ducks';
+const monitorServerUrl = 'http://localhost:8100/ducks'; // https://github.com/jerkey/ducks/blob/dpms-control/server.py
 const turnMonitorOnUrl = `${monitorServerUrl}/open`;
 const turnMonitorOffUrl = `${monitorServerUrl}/close`;
 
