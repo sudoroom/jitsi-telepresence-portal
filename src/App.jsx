@@ -17,8 +17,8 @@ const App = () => {
     const handleParticipantChanged = (payload, api) => {
         const pInfo = api.getParticipantsInfo();
         const url = pInfo.length > 1 ? turnMonitorOnUrl : turnMonitorOffUrl;
-
-        fetch(url)
+        let req = new Request(url);
+        fetch(req)
             .then(response => response.json())
             .then(data => console.log(data));
 
