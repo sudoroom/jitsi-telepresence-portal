@@ -2,9 +2,9 @@
 import { JitsiMeeting } from '@jitsi/web-sdk';
 import React, { useRef, useState } from 'react';
 
-const monitorServerUrl = '/ducks';
-const turnMonitorOnUrl = `${monitorServerUrl}/on`;
-const turnMonitorOffUrl = `${monitorServerUrl}/off`;
+const monitorServerUrl = 'http://localhost:8100/ducks';
+const turnMonitorOnUrl = `${monitorServerUrl}/open`;
+const turnMonitorOffUrl = `${monitorServerUrl}/close`;
 
 const App = () => {
     const apiRef = useRef();
