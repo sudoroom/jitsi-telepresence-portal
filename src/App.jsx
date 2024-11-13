@@ -16,7 +16,14 @@ const App = () => {
 
     const handleParticipantChanged = (payload, api) => {
         const pInfo = api.getParticipantsInfo();
-        const url = pInfo.length > 1 ? turnMonitorOnUrl : turnMonitorOffUrl;
+        let url;
+        if (pInfo.length === 2 &&
+            pInfo[0].displayName === pInfo[1].displayName)
+            {
+                url = turnMonitorOffUrl
+            } else {
+                url = pInfo.length > 1 ? turnMonitorOnUrl : turnMonitorOffUrl;
+            }
         let req = new Request(url);
         fetch(req)
             .then(response => response.json())
